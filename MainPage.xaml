@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="catcart.CatCart"
+             Title="Cat Cart"
+             BackgroundColor="#f0f0f0">
+
+    <Grid RowDefinitions="Auto, Auto, *, Auto">
+        <Grid Grid.Row="0" BackgroundColor="#d2b48c" ColumnDefinitions="*, Auto, Auto, Auto">
+            <Label Text="CATTO" FontSize="24" HorizontalOptions="Start" VerticalOptions="Center" Margin="10,0,0,0" />
+            <Image Source="search_icon.png" Aspect="AspectFit" HeightRequest="25" Grid.Column="1" Margin="0,0,10,0" />
+            <Image Source="cart_icon.png" Aspect="AspectFit" HeightRequest="25" Grid.Column="2" Margin="0,0,10,0" />
+            <Image Source="menu_icon.png" Aspect="AspectFit" HeightRequest="25" Grid.Column="3" Margin="0,0,10,0" />
+        </Grid>
+
+        <Grid Grid.Row="1" Padding="10">
+            <HorizontalStackLayout>
+                <Image Source="dropdown_icon.png" Aspect="AspectFit" HeightRequest="15" VerticalOptions="Center" />
+                <Label Text="Breed" FontSize="16" VerticalOptions="Center" />
+            </HorizontalStackLayout>
+        </Grid>
+
+        <ScrollView Grid.Row="2">
+            <Grid Padding="10" ColumnDefinitions="*, *" RowDefinitions="Auto, Auto">
+
+                <!-- Ragdoll Cat -->
+                <Border Grid.Row="0" Grid.Column="0" Margin="5" Stroke="Black" StrokeThickness="1" BackgroundColor="#e6d5b9" x:Name="RagdollFrame">
+                    <VerticalStackLayout>
+                        <Image Source="ragdoll.jfif" Aspect="AspectFill" HeightRequest="150" />
+                        <Label Text="Ragdoll Cat" FontSize="16" HorizontalOptions="Center" />
+                        <Label Text="Php 13,000" FontSize="16" HorizontalOptions="Center" />
+                        <VerticalStackLayout.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="RagdollFrame_Tapped" />
+                        </VerticalStackLayout.GestureRecognizers>
+                    </VerticalStackLayout>
+                </Border>
+
+                <!-- Maine Coon Cat -->
+                <Border Grid.Row="0" Grid.Column="1" Margin="5" Stroke="Black" StrokeThickness="1" BackgroundColor="#e6d5b9" x:Name="MaineCoonFrame">
+                    <VerticalStackLayout>
+                        <Image Source="mainecoon.jfif" Aspect="AspectFill" HeightRequest="150"/>
+                        <Label Text="Maine Coon Cat" FontSize="16" HorizontalOptions="Center" />
+                        <Label Text="Php 22,000" FontSize="16" HorizontalOptions="Center" />
+                        <VerticalStackLayout.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="MaineCoonFrame_Tapped" />
+                        </VerticalStackLayout.GestureRecognizers>
+                    </VerticalStackLayout>
+                </Border>
+
+                <!-- Siberian Cat -->
+                <Border Grid.Row="1" Grid.Column="0" Margin="5" Stroke="Black" StrokeThickness="1" BackgroundColor="#e6d5b9" x:Name="SiberianFrame">
+                    <VerticalStackLayout>
+                        <Image Source="siberian.jfif" Aspect="AspectFill" HeightRequest="150" />
+                        <Label Text="Siberian Cat" FontSize="16" HorizontalOptions="Center" />
+                        <Label Text="Php 27,000" FontSize="16" HorizontalOptions="Center" />
+                        <VerticalStackLayout.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="SiberianFrame_Tapped" />
+                        </VerticalStackLayout.GestureRecognizers>
+                    </VerticalStackLayout>
+                </Border>
+
+                <!-- Bombay Cat -->
+                <Border Grid.Row="1" Grid.Column="1" Margin="5" Stroke="Black" StrokeThickness="1" BackgroundColor="#e6d5b9" x:Name="BombayFrame">
+                    <VerticalStackLayout>
+                        <Image Source="bombay.jfif" Aspect="AspectFill" HeightRequest="150" />
+                        <Label Text="Bombay Cat" FontSize="16" HorizontalOptions="Center" />
+                        <Label Text="Php 13,000" FontSize="16" HorizontalOptions="Center" />
+                        <VerticalStackLayout.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="BombayFrame_Tapped" />
+                        </VerticalStackLayout.GestureRecognizers>
+                    </VerticalStackLayout>
+                </Border>
+
+            </Grid>
+        </ScrollView>
+
+        <Grid Grid.Row="3" BackgroundColor="#d2b48c" ColumnDefinitions="*, *, *">
+            <Image Source="chat_icon.png" Aspect="AspectFit" HeightRequest="30" HorizontalOptions="Center" VerticalOptions="Center" x:Name="ChatButton" />
+            <Image Source="home_icon.png" Aspect="AspectFit" HeightRequest="30" Grid.Column="1" HorizontalOptions="Center" VerticalOptions="Center" x:Name="HomeButton" />
+            <Image Source="profile_icon.png" Aspect="AspectFit" HeightRequest="30" Grid.Column="2" HorizontalOptions="Center" VerticalOptions="Center" x:Name="ProfileButton" />
+        </Grid>
+    </Grid>
+</ContentPage>

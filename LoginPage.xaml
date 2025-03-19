@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="catcart.LoginPage"
+             Title="Login"
+             BackgroundColor="#FFF8E1">
+
+    <VerticalStackLayout>
+        <Grid HeightRequest="150">
+            <Image Source="logopeak.png" Aspect="AspectFit" HorizontalOptions="Center" VerticalOptions="Center" Margin="57,0,0,0"/>
+        </Grid>
+
+        <VerticalStackLayout Padding="20" VerticalOptions="CenterAndExpand">
+            <Label Text="Login" FontSize="32" FontFamily="RoomachRegular" HorizontalOptions="Center" TextColor="Black" />
+            <Label Text="Sign in to continue." FontSize="16" HorizontalOptions="Center" TextColor="Gray" />
+
+            <Label Text="NAME" Margin="0,20,0,5" TextColor="Black" />
+            <Entry x:Name="UsernameEntry" BackgroundColor="#E0E0E0" TextColor="Black" />
+
+            <Label Text="PASSWORD" Margin="0,10,0,5" TextColor="Black" />
+            <Entry x:Name="PasswordEntry" IsPassword="True" BackgroundColor="#E0E0E0" TextColor="Black" />
+
+            <Button Text="Log in" Clicked="OnLoginClicked" BackgroundColor="Black" TextColor="White" Margin="0,20,0,10" />
+
+            <VerticalStackLayout HorizontalOptions="Center">
+                <Label Text="Forgot Password?" TextColor="Gray" />
+                <Label Text="Signup !" TextColor="Gray" HorizontalOptions="Center"/>
+            </VerticalStackLayout>
+        </VerticalStackLayout>
+    </VerticalStackLayout>
+</ContentPage>
